@@ -1,0 +1,8 @@
+@font-face {
+    font-family: dseg;
+    src: url(./fonts/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.woff2);
+}
+
+h1{
+    font-family: dseg;
+}
