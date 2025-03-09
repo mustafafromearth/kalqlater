@@ -6,3 +6,40 @@
 h1{
     font-family: dseg;
 }
+
+body{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calc-body{
+    background: black;
+    width: 30vw;
+}
+
+.calc-display{
+    background-color: aqua;
+    height: 8rem;
+    width: 30vw;
+}
+
+.calc-buttons{
+    height: 24rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#all-clear{
+    grid-column: span 2;
+}
+
+#zero{
+    grid-column: span 2; 
+}
+
+#equals{
+    grid-row: 4 / span 2;
+    grid-column: 4 / 5;
+}
