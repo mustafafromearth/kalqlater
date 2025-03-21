@@ -3,30 +3,38 @@
     src: url(./fonts/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.woff2);
 }
 
-h1{
-    font-family: dseg;
-}
-
 body{
     display:flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    margin: 0;
 }
 
-.calc-body{
+.calculator{
     background: black;
-    width: 30vw;
+    width: 25rem;
+    padding: 10px
 }
 
 .calc-display{
     background-color: aqua;
     height: 8rem;
-    width: 30vw;
+    /* width: 25rem; */
+    padding: 10px;
+}
+
+.calc-upper-display{
+    height: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
 }
 
 .calc-buttons{
     height: 24rem;
     display: grid;
+    padding-top: 10px;
+    gap: 5px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
@@ -42,4 +50,28 @@ body{
 #equals{
     grid-row: 4 / span 2;
     grid-column: 4 / 5;
+}
+
+button{
+    font-size: xx-large;
+}
+
+.output-container{
+    font-family: dseg;
+    font-size: 5rem;
+    position: relative;
+}
+
+.digit-shadow{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+.output-display{
+    position: relative;
+    z-index: 2;
 }
