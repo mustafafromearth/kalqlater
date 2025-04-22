@@ -71,7 +71,8 @@ button{
     user-select: none;
 }
 
-.output-display{
+#output-display{
     position: relative;
     z-index: 2;
+    text-align: right;
 }
