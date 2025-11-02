@@ -51,6 +51,8 @@ AllClear.addEventListener('click',()=>{
 
 Operators.forEach((operator)=>{
     operator.addEventListener('click',()=>{
+        storedValue = calculate();        
+        refreshUpperDisplay();
         currentOperator = operator.innerText;
         if(storedValue ===""){
             storedValue = currentValue;
@@ -58,27 +60,24 @@ Operators.forEach((operator)=>{
         currentValue = '0'
         refreshOutputDisplay();
         refreshUpperDisplay();
-
-    })
+    })  
 })
 
 Equals.addEventListener('click',()=>{
-    currentValue = calculate(storedValue, currentValue, currentOperator)
+    currentValue = calculate()
     storedValue = "";
     currentOperator = null;
     refreshOutputDisplay()
     refreshUpperDisplay()
-
 })
 
-function calculate(storedValue, currentValue, currentOperator){
+function calculate(){
     if(storedValue === ""){return currentValue}
     storedValue = parseInt(storedValue); currentValue = parseInt(currentValue)
-    console.log(storedValue)
     switch (currentOperator){
         case "+": return storedValue + currentValue;
         case "−": return storedValue - currentValue;
         case "×": return storedValue * currentValue;
         case "/": return storedValue / currentValue;
     }
-}
+}   
